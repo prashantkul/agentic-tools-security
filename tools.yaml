@@ -1,0 +1,51 @@
+# MCP Toolbox Configuration for Travel Agent
+# BigQuery integration for travel data management
+
+sources:
+  travel_bq_source:
+    kind: "bigquery"
+    project: "privacy-ml-lab2"
+    location: "us-central1"
+
+tools:
+  search_destinations:
+    kind: bigquery-execute-sql
+    source: travel_bq_source
+    description: |
+      Search for travel destinations based on criteria like budget, region, category, and season.
+      This is a read-only tool that queries the destinations table.
+
+  get_all_destinations:
+    kind: bigquery-execute-sql
+    source: travel_bq_source
+    description: |
+      Get all available travel destinations. This is a read-only tool
+      that returns a list of all destinations in the database.
+
+  save_user_preferences:
+    kind: bigquery-execute-sql
+    source: travel_bq_source
+    description: |
+      Save user travel preferences to the database.
+      This tool inserts user preference data for personalization.
+
+  get_user_preferences:
+    kind: bigquery-execute-sql
+    source: travel_bq_source
+    description: |
+      Retrieve user travel preferences from the database.
+      This is a read-only tool that returns saved user preferences.
+
+  search_budget_destinations:
+    kind: bigquery-execute-sql
+    source: travel_bq_source
+    description: |
+      Find destinations within a specific budget category.
+      Specialized tool for budget-focused searches.
+
+  log_agent_interaction:
+    kind: bigquery-execute-sql
+    source: travel_bq_source
+    description: |
+      Log agent interaction for analytics and improvement.
+      This tool tracks user queries and agent responses.
