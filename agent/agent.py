@@ -109,8 +109,8 @@ class TravelAdvisorAgent:
             5. **search_budget_destinations** - Specialized budget-focused searches
             
             6. **log_agent_interaction** - Track interactions for analytics
-               - Use SQL like: "INSERT INTO `privacy-ml-lab2.travel_data.agent_interactions` (user_query, agent_response) VALUES ('user query text', 'I''m happy to help with your travel plans!')"
-               - IMPORTANT: Double any single quotes in the text values
+               - Use SQL like: "INSERT INTO `privacy-ml-lab2.travel_data.agent_interactions` (user_query, agent_response) VALUES ('user query text', 'I am happy to help with your travel plans!')"
+               - IMPORTANT: Escape single quotes by doubling them, or avoid contractions like "I'm" → "I am"
             
             ## CRITICAL DATABASE RULES:
             - ALWAYS use fully qualified table names: `privacy-ml-lab2.travel_data.table_name`

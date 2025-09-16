@@ -29,6 +29,7 @@ toolbox serve --config tools.yaml --port 5000
 
 **Note**: To start the toolbox server with service account credentials, use this command:
 ```bash
+gcloud auth application-default login --project=privacy-ml-lab2
 GOOGLE_APPLICATION_CREDENTIALS=/Users/pskulkarni/Documents/source-code/privacy-ml-lab2-9eb2bfb2e71e.json toolbox --tools-file tools.yaml --port 5000 -a 127.0.0.1
 ```
 
